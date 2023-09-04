@@ -137,36 +137,36 @@ int main() {
     cout<<"If program is not ending it means your code might be stuck in an infinite Loop"<<endl;
     cout<<endl;
     if(toTest&1){
-        cout<<"STARTIGN WITH CHAINING"<<endl;
+        cout<<"STARTING WITH CHAINING"<<endl;
         Bank=new Chaining;
         test();
         cout<<"DONE WITH CHAINING"<<endl;
     }
     if(toTest&2){
-        cout<<"STARTIGN WITH LinearProbing"<<endl;
+        cout<<"STARTING WITH LinearProbing"<<endl;
         Bank=new LinearProbing;
         test();
         cout<<"DONE WITH LinearProbing"<<endl;
     }
     if(toTest&4){
-        cout<<"STARTIGN WITH QuadraticProbing"<<endl;
+        cout<<"STARTING WITH QuadraticProbing"<<endl;
         Bank=new QuadraticProbing;
         test();
         cout<<"DONE WITH QuadraticProbing"<<endl;
     }
     if(toTest&8){
-        cout<<"STARTIGN WITH CubicProbing"<<endl;
+        cout<<"STARTING WITH CubicProbing"<<endl;
         Bank=new CubicProbing;
         test();
         cout<<"DONE WITH CubicProbing"<<endl;
     }
     if(toTest&16){
-        cout<<"STARTIGN WITH Comp"<<endl;
+        cout<<"STARTING WITH Comp"<<endl;
         Bank=new Comp;
         test();
         cout<<"DONE WITH Comp"<<endl;
     }
-    cout<<"Do you wnat to clean up the test cases file generated?(y/n):"<<endl;
+    cout<<"Do you want to clean up the test cases file generated?(y/n):"<<endl;
     cout.flush();
     string r;
     cin>>r;
