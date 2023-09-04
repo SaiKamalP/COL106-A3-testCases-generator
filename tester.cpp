@@ -33,6 +33,7 @@ void test(){
                 if(Bank->getBalance(accName)!=accBalance){
                     cout<<"FAILED on creating account "<<accName<<" with balance "<<accBalance<<endl;
                     cout<<"On retreving balance on "<<accName<<" expected "<<accBalance2<<" but found "<<Bank->getBalance(accName)<<endl;
+                    throw std::runtime_error("");
                 }
                 casesTested++;
                 break;
@@ -43,6 +44,8 @@ void test(){
                 if(Bank->getBalance(accName)!=accBalance2){
                     cout<<"FAILED on adding transaction to "<<accName<<" an amount "<<transactionAmount<<endl;
                     cout<<"Final balance on "<<accName<<" expected "<<accBalance2<<" but found "<<Bank->getBalance(accName)<<endl;
+                    throw std::runtime_error("");
+                
                 }
                 casesTested++;
                 break;
@@ -53,6 +56,7 @@ void test(){
                 if(rKValue!=TopKBalances.size()){
                     cout<<"FAILED on geiing top K balances"<<endl;
                     cout<<"Expected length of vector "<<rKValue<<" but found "<<TopKBalances.size()<<endl;
+                    throw std::runtime_error("");
                 }
                 else{
                     sort(TopKBalances.rbegin(),TopKBalances.rend());
@@ -67,6 +71,7 @@ void test(){
                         cout<<"FAILED on getting top K balances"<<endl;
                         cout<<"Expected top K balances "<<s2<<endl;
                         cout<<"Found "<<s1<<endl;
+                        throw std::runtime_error("");
                     }
                 }
                 casesTested++;
@@ -77,6 +82,8 @@ void test(){
                 if(accBalance!=Bank->getBalance(accName)){
                     cout<<"FAILED to get acc balance of acc "<<accName<<endl;
                     cout<<"Expected balance "<<accBalance<<" but found "<<Bank->getBalance(accName)<<endl;
+                    throw std::runtime_error("");
+                
                 }
                 casesTested++;
                 break;
@@ -88,6 +95,8 @@ void test(){
                     cout<<"FAILED in deletion of account "<<accName<<endl;
                     cout<<"Expected "<<deletionResult1<<" but found "<<deletionResult2<<endl;
                     cout<<"1 is true and 0 is false"<<endl;
+                    throw std::runtime_error("");
+                
                 }
                 casesTested++;
                 break;
@@ -99,6 +108,8 @@ void test(){
                     cout<<"FAILED in doesExist "<<accName<<endl;
                     cout<<"Expected "<<accBalance<<" but found "<<accExists<<endl;
                     cout<<"1 is true and 0 is false"<<endl;
+                    throw std::runtime_error("");
+                
                 }
                 casesTested++;
                 break;
@@ -107,6 +118,8 @@ void test(){
                 if(Bank->databaseSize()!=accBalance){
                     cout<<"FAILED total database size"<<endl;
                     cout<<"Expected "<<accBalance<<" but found "<<Bank->databaseSize()<<endl;
+                    throw std::runtime_error("");
+                
                 }
                 casesTested++;
                 break;
